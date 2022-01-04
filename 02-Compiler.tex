@@ -1,0 +1,12 @@
+\section{Compiler}
+\label{sec:compiler}
+Zuallererst benötigen wir einen Compiler welcher uns {\ttfamily .asm}-Files in {\ttfamily .hex}-Files kompiliert. Als Compiler benutzen wir das Packages {\ttfamily gputils}, welches über den folgenden Befehl installiert werden kann:
+\begin{lstlisting}[language=bash]
+                            sudo apt install gputils
+\end{lstlisting}
+
+Damit ist man nun in der Lage mithilfe von {\ttfamily gpasm} über den Terminal {\ttfamily .asm}-Files zu kompilieren. Bei einem gegeben File {\ttfamily foo.asm} wäre dann der Befehl im Terminal:
+\begin{lstlisting}[language=bash]
+                                gpasm foo.asm
+\end{lstlisting} 
+Dabei entstehen 3 weitere Files {\ttfamily foo.cod}, {\ttfamily foo.hex} (Dieses File wird benötigt) und {\ttfamily foo.lst}. Damit {\ttfamily foo.hex}-File auf den PIC-Microchip geladen werden kann wird das folgende Tool benötigt.

@@ -1,0 +1,89 @@
+% Autor: Manuel Lippert
+
+\documentclass[paper=a4,bibliography=totoc,BCOR=10mm,numbers=noenddot,fontsize=11pt]{article}
+
+% Packages
+\usepackage[ngerman]{babel}
+\usepackage[latin1, utf8]{inputenc}
+\usepackage[babel,german=quotes]{csquotes} %For Quotes
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{nicefrac}
+\usepackage{fancyvrb}
+\usepackage{amsmath,amssymb,amstext}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{microtype}
+\usepackage[format=plain]{caption}
+\usepackage{physics}
+\usepackage{titleref}
+
+% Zusätzliche Packages
+\usepackage{geometry}
+\usepackage{anyfontsize}
+\usepackage[table]{xcolor}
+\usepackage{ifthen}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{amsfonts}
+\usepackage{xstring}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{listings}
+
+% Abschnittseinrückung und -abstand
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\parindent 0.0cm
+\parskip 0.8ex plus 0.5ex minus 0.5ex
+
+% Anzahl und Größe von Gleitobjekten
+% maximal 2 Objekte oben und unten
+% erlaubt auch größere Bilder, welche die ganze Seite benötigen
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\setcounter{bottomnumber}{2}
+\setcounter{topnumber}{2}
+\renewcommand{\bottomfraction}{1.}
+\renewcommand{\topfraction}{1.}
+\renewcommand{\textfraction}{0.}
+
+%\sc und \bc veraltet. Daher: (20.09.2018)
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareOldFontCommand{\bf}{\normalfont\scshape}{\textbf}
+
+% Verschiedenes
+%\pagestyle{headings}          % Der Seitenstil sollte möglichst nicht verändert werden
+\graphicspath{{./Bilder/}}    % Der Pfad für die Abbildungen Abbildungen wird gesetzt
+\VerbatimFootnotes            % \verb etc.
+
+\newgeometry{top=30mm, bottom=30mm, inner=20mm, outer=20mm}
+
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue},
+}
+
+\begin{document}
+
+% 0. Titel
+\title{\vspace{-2.0cm}\textbf{\fontsize{30}{0}PIC Programmierung mit PICkkit 2 unter Linux}}
+\author{Von Manuel Lippert für den Kurs: "Prozessrechner und Elektronik" an der Universität Bayreuth}
+\maketitle
+\begin{center}
+    \includegraphics[scale=0.1]{UniBT.png}
+\end{center}
+
+% 1. Einleitung
+\input{01-Einleitung.tex}
+
+% 2. Compiler
+\input{02-Compiler.tex}
+\newpage
+
+% 3. pk2cmd
+\input{03-pk2cmd.tex}
+
+\end{document}
