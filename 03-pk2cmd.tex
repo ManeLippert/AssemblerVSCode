@@ -1,13 +1,13 @@
 \section{pk2cmd}
 \label{sec:pk2cmd}
-Das pk2cmd Commandline-Tool ermöglicht Linux (Es gibt auch eine Mac und Windows Version) mit dem PICkkit 2 PIC-Microchip über den Terminal anzusteuern. Hier wird es dafür benötigt um den compilierten Assembler-Code auf den PIC-Microchip zu laden.
+Das {\ttfamily pk2cmd} Commandline-Tool ermöglicht Linux (Es gibt auch eine Mac und Windows Version) mit dem PICkkit 2 PIC-Microchip über den Terminal anzusteuern. Hier wird es dafür benötigt um den compilierten Assembler-Code auf den PIC-Microchip zu laden.
 
 \subsection{Installation}
 \label{sub:installation}
 Quelle: \url{https://www.making-sound.co.uk/tech-notes/pickit2-linux.html}\\
 
 \begin{itemize}
-    \item[1)] Zuerst ladet man die nötigen Pakete um pk2cmd zu installieren. Das erfolgt über diesen Befehl im Terminal:
+    \item[1)] Zuerst ladet man die nötigen Pakete um {\ttfamily pk2cmd} zu installieren. Das erfolgt über diesen Befehl im Terminal:
     \begin{lstlisting}[language=bash]
     sudo apt install build-essential libusb-dev
     \end{lstlisting}
@@ -33,7 +33,7 @@ Quelle: \url{https://www.making-sound.co.uk/tech-notes/pickit2-linux.html}\\
         \includegraphics[scale = 0.5]{pk2cmd_test.png}
     \end{center}
     \newpage
-    \item[5)] Zum Testen ob der PIC-Microchip von pk2cmd angesteuert wird kann dieser Command im selben Ordner ausgeführt werden:
+    \item[5)] Zum Testen ob der PIC-Microchip von {\ttfamily pk2cmd} angesteuert wird kann dieser Command im selben Ordner ausgeführt werden:
     \begin{lstlisting}[language=bash]
     sudo ./pk2cmd -B./ -I -P
     \end{lstlisting}
@@ -215,4 +215,4 @@ Um nun ein gegebenes {\ttfamily foo.hex}-File auf einen PIC-Microchip in unseren
 \begin{lstlisting}[language=bash]
                 pk2cmd -A5 -PPIC16F84A -F foo.hex -M -T -R
 \end{lstlisting}
-Nach dem ausüben dieses Befehls sollte der Microchip das Programm ausführen. Was die jeweiligen Attribute des Befehls festlegen, kann im Kapitel \ref{sub:commands} nachgelesen werden.
+Nach dem ausüben dieses Befehls sollte der Microchip das Programm ausführen. Was die jeweiligen Attribute des Befehls festlegen, kann im Kapitel \ref{sub:commands} nachgelesen werden. Ab hier können Sie nun über einen Editor Ihrer Wahl {\ttfamily .asm}-File erstellen mit {\ttfamily gpasm} kompilieren und mit {\ttfamily pk2cmd} auf den PIC-Microchip laden.
