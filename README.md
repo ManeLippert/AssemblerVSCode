@@ -6,4 +6,15 @@ Diese Anleitung entstand im Rahmen des Moduls "Prozessrechner und Elektronik" an
 
 Bei Fragen erstellen sie ein Issue und ich werde Ihnen bei weiterhelfen.
 
-[embed]https://github.com/ManeLippert/AssemblerVSCode/blob/master/HowToLinux.pdf[/embed]
+# Anleitung
+![alt text](Bilder/PDF_Picture/HowToLinux-01.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-02.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-03.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-04.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-05.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-06.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-07.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-08.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-09.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-10.png)
+![alt text](Bilder/PDF_Picture/HowToLinux-11.png)
