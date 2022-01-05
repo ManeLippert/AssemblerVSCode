@@ -38,39 +38,39 @@ Nun wollen wir VS Code nur sagen, was es zu tun hat. Dies kann man entweder in e
         \includegraphics[scale=0.45]{commandPalette.png}
     \end{center}
     \item[2)] In diese Datei fügen sie folgende Code-Zeilen innerhalb der geschweiften Klammern ein (Ich habe in Kommentaren gekennzeichnet mit // reingeschrieben was welche Zeile macht)
-    \begin{lstlisting}[language=json]
-        // Sagt VS Code als was er .asm-Files und .INC-Files behandeln soll
-        "files.associations": {
-            "*.asm": "asm-collection",
-            "*.INC": "asm-collection"
-        },
+\begin{lstlisting}[language=json]
+// Sagt VS Code als was er .asm-Files und .INC-Files behandeln soll
+"files.associations": {
+    "*.asm": "asm-collection",
+    "*.INC": "asm-collection"
+},
 
-        // Code Runner
-        // Play-Button zum Ausfuehren des Codes in TitleMenu
-        "code-runner.showRunIconInEditorTitleMenu": true,
-        // Fuehrt Code in Terminal aus
-        "code-runner.runInTerminal": true,
-        // Befehle um .asm-File oder .hex-File auszufuehren mit dem PIC16F84A als Standard PIC
-        "code-runner.executorMap": {
-            "asm-collection": "cd $dir && gpasm $fileNameWithoutExt.asm &&  pk2cmd -A5 -PPIC16F84A -F $fileNameWithoutExt.hex -M -T -R && cd $workspaceRoot",
-            "hex": "cd $dir && pk2cmd -A5 -PPIC16F84A -F $fileNameWithoutExt.hex -M -T -R"
-        },
-    \end{lstlisting}
+// Code Runner
+// Play-Button zum Ausfuehren des Codes in TitleMenu
+"code-runner.showRunIconInEditorTitleMenu": true,
+// Fuehrt Code in Terminal aus
+"code-runner.runInTerminal": true,
+// Befehle um .asm-File oder .hex-File auszufuehren mit dem PIC16F84A als Standard PIC
+"code-runner.executorMap": {
+    "asm-collection": "cd $dir && gpasm $fileNameWithoutExt.asm &&  pk2cmd -A5 -PPIC16F84A -F $fileNameWithoutExt.hex -M -T -R && cd $workspaceRoot",
+    "hex": "cd $dir && pk2cmd -A5 -PPIC16F84A -F $fileNameWithoutExt.hex -M -T -R"
+},
+\end{lstlisting}
     \item[3)] Save mit \textbf{STRG+S}
 \end{itemize}
 
 \subsection{Erstes .asm-File ausführen}
-Als letzten Punkt in dieser Anleitung zeige ich Ihnen wie Sie nun ein {\ttfamily .asm}-File ausführen können. Däfur drücken sie einfach \textbf{STRG+N} in VS Code. Es soll sich ein Tab aufgemacht haben mit dem Namen \enquote{Untitled-1}. In die frei Fläche fügen sie den Code {\ttfamily lauf.asm} den ich unten aufführe. Achten Sie auf die Formatierung!
+Als letzten Punkt in dieser Anleitung zeige ich Ihnen wie Sie nun ein {\ttfamily .asm}-File ausführen können. Däfur drücken sie einfach \textbf{STRG+N} in VS Code. Es soll sich ein Tab aufgemacht haben mit dem Namen \enquote{Untitled-1}. In die frei Fläche fügen sie den Code \href{https://github.com/ManeLippert/AssemblerVSCode/lauf.asm}{\ttfamily lauf.asm} den ich unten aufführe. Achten Sie auf die Formatierung!
 \begin{lstlisting}[language={[x86masm]Assembler}]
 ;Von Reinhard Richter aus dem Kurs Prozessrechner und Elektronik
 
     processor	PIC16F84A
-    include		p16f84a.inc
+    include	p16f84a.inc
 
-;Configurationword*******************************************************
+;Configurationword*************************************************************
     __CONFIG _CP_OFF & _XT_OSC & _WDT_OFF & _PWRTE_ON ;config: 0x3ff1
 
-;INITIALISIERUNG*********************************************************
+;INITIALISIERUNG***************************************************************
  org 0x000	;schreibe den naechsten Befehl an die Speicherstelle 0x000
 
         bsf	STATUS,RP0		;BANK1
@@ -86,22 +86,22 @@ Als letzten Punkt in dieser Anleitung zeige ich Ihnen wie Sie nun ein {\ttfamily
         clrf	PORTB			;PORTB loeschen
         movlw	0x01			;00000001 in W
         movwf	0x0C			;lade W in Register 0x0C
-        bcf	STATUS, C			;loesche das Carry-Bit
+        bcf	STATUS, C		;loesche das Carry-Bit
 
-;HAUPTPROGRAMM***********************************************************
+;HAUPTPROGRAMM*****************************************************************
 MAIN
-        movf	0x0C,W			;Lade den Inhalt von Register 0x0C nach W
+        movf	0x0C,W			;Lade den Inhalt von 0x0C nach W
         movwf	PORTA			;Kopiere W nach PORTA
         movwf	PORTB			;Kopiere W nach PORTB
         call	delay			;warte etwas
-        rlf	0x0C,f				;Rotiere 0x0C nach links
-        goto MAIN				;Schleife
+        rlf	0x0C,f			;Rotiere 0x0C nach links
+        goto MAIN			;Schleife
 
-;Delayschleife***********************************************************
+;Delayschleife*****************************************************************
 delay
         clrf	TMR0			;loesche TMR0
-        bcf	INTCON,T0IF			;TMR0 overflow interrupt flag
-                        ;loeschen
+        bcf	INTCON,T0IF		;TMR0 overflow interrupt flag loeschen
+
 delay_loop
         btfss	INTCON,T0IF		;springe wenn T0IF gesetzt
         goto	delay_loop			

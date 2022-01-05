@@ -1,6 +1,6 @@
 \section{pk2cmd}
 \label{sec:pk2cmd}
-Das {\ttfamily pk2cmd} Commandline-Tool ermöglicht Linux (Es gibt auch eine Mac und Windows Version) mit dem PICkkit 2 PIC-Microchip über den Terminal anzusteuern. Hier wird es dafür benötigt um den compilierten Assembler-Code auf den PIC-Microchip zu laden.
+Das {\ttfamily pk2cmd} Commandline-Tool ermöglicht Linux (Es gibt auch eine Mac und Windows Version) mit dem PICkit 2 PIC-Microchip über den Terminal anzusteuern. Hier wird es dafür benötigt um den compilierten Assembler-Code auf den PIC-Microchip zu laden.
 
 \subsection{Installation}
 \label{sub:installation}
@@ -62,7 +62,7 @@ Quelle: \url{https://github.com/kvadevack/pk2cmd/blob/master/pk2cmd/release/Read
 \begin{lstlisting}[language=bash]
 PICkit 2 COMMAND LINE HELP
 Options              Description                              Default
------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 A<value>             Set Vdd voltage                          Device Specific
 B<path>              Specify the path to PK2DeviceFile.dat    Searches PATH
                                                               and calling dir
@@ -151,14 +151,11 @@ Y<memory region>     Verify Device                            Do Not Verify
                          (Serial EEPROM memory is 'P')
 Z                    Preserve EEData on Program               Do Not Preserve
 ?                    Help Screen                              Not Shown
-
-
-
-
-
-
-
-
+-------------------------------------------------------------------------------
+\end{lstlisting}
+\newpage
+\begin{lstlisting}[language=bash]
+-------------------------------------------------------------------------------
 
      Each option must be immediately preceeded by a switch, Which can
      be either a dash <-> or a slash </> and options must be separated
@@ -205,7 +202,7 @@ Z                    Preserve EEData on Program               Do Not Preserve
      type -?P<string> to search for and display a list of supported devices
                       beginning with <string>.
 
----------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 \end{lstlisting}
 \end{center}
 \newpage
@@ -213,6 +210,6 @@ Z                    Preserve EEData on Program               Do Not Preserve
 \label{sub:howToUse}
 Um nun ein gegebenes {\ttfamily foo.hex}-File auf einen PIC-Microchip in unseren Fall der PIC16F84A zu laden wird folgender Befehl im Terminal ausgeführt:
 \begin{lstlisting}[language=bash]
-                pk2cmd -A5 -PPIC16F84A -F foo.hex -M -T -R
+                   pk2cmd -A5 -PPIC16F84A -F foo.hex -M -T -R
 \end{lstlisting}
 Nach dem ausüben dieses Befehls sollte der Microchip das Programm ausführen. Was die jeweiligen Attribute des Befehls festlegen, kann im Kapitel \ref{sub:commands} nachgelesen werden. Ab hier können Sie nun über einen Editor Ihrer Wahl {\ttfamily .asm}-File erstellen mit {\ttfamily gpasm} kompilieren und mit {\ttfamily pk2cmd} auf den PIC-Microchip laden.
