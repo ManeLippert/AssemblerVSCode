@@ -1,3 +1,4 @@
+;Von Reinhard Richter aus dem Kurs Prozessrechner und Elektronik
 
 	processor	PIC16F84A
 	include		p16f84a.inc
