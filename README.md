@@ -5,3 +5,5 @@ Dies ist eine Anleitung für das Aufsetzen von Assembler unter Linux mit der Zus
 Diese Anleitung entstand im Rahmen des Moduls "Prozessrechner und Elektronik" an der Universität Bayreuth und soll kommenden Studenten den Programmiereinstieg vereinfachen.
 
 Bei Fragen erstellen sie ein Issue und ich werde Ihnen bei weiterhelfen.
+
+[embed]https://github.com/ManeLippert/AssemblerVSCode/blob/master/HowToLinux.pdf[/embed]
