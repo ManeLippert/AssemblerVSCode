@@ -60,11 +60,21 @@
 
 \newgeometry{top=30mm, bottom=30mm, inner=20mm, outer=20mm}
 
+\definecolor{beige}{HTML}{F5F5DC}
+
 \lstset{basicstyle=\ttfamily,
   showstringspaces=false,
   commentstyle=\color{red},
   keywordstyle=\color{blue},
+  backgroundcolor=\color{beige},
 }
+
+\lstdefinelanguage{json}{
+    basicstyle=\ttfamily,
+    showstringspaces=false,
+    breaklines=true,
+}
+
 
 \begin{document}
 
@@ -75,6 +85,8 @@
 \begin{center}
     \includegraphics[scale=0.1]{UniBT.png}
 \end{center}
+
+\vspace{5cm}
 
 % 1. Einleitung
 \input{01-Einleitung.tex}
@@ -88,5 +100,8 @@
 
 % 4. Vs Code Setup
 \input{04-VsCode.tex}
+
+% 5. Fazit
+\input{05-Fazit.tex}
 
 \end{document}
