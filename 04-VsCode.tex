@@ -52,7 +52,7 @@ Nun wollen wir VS Code nur sagen, was es zu tun hat. Dies kann man entweder in e
 "code-runner.runInTerminal": true,
 // Befehle um .asm-File oder .hex-File auszufuehren mit dem PIC16F84A als Standard PIC
 "code-runner.executorMap": {
-    "asm-collection": "cd $dir && gpasm $fileNameWithoutExt.asm &&  pk2cmd -A5 -PPIC16F84A -F $fileNameWithoutExt.hex -M -T -R && cd $workspaceRoot",
+    "asm-collection": "cd $dir && gpasm -p16f84a $fileNameWithoutExt.asm &&  pk2cmd -A5 -PPIC16F84A -F $fileNameWithoutExt.hex -M -T -R && cd $workspaceRoot",
     "hex": "cd $dir && pk2cmd -A5 -PPIC16F84A -F $fileNameWithoutExt.hex -M -T -R"
 },
 \end{lstlisting}

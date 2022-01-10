@@ -10,3 +10,8 @@ Damit ist man nun in der Lage mithilfe von {\ttfamily gpasm} über den Terminal 
                                 gpasm foo.asm
 \end{lstlisting} 
 Dabei entstehen 3 weitere Files {\ttfamily foo.cod}, {\ttfamily foo.hex} (Dieses File wird benötigt) und {\ttfamily foo.lst}. Damit {\ttfamily foo.hex}-File auf den PIC-Microchip geladen werden kann wird das folgende Tool benötigt.
+
+Wenn der Prozessor,, in unserem Fall der PIC16F84A,  nicht in der {\ttfamily .asm}-File mit dem Befehl {\ttfamily processor	PIC16F84A} definiert worden ist, kann dies in {\ttfamily gpasm} gemacht werden mit:
+\begin{lstlisting}[language=bash]
+                            gpasm -p16f84a foo.asm
+\end{lstlisting} 
