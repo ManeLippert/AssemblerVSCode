@@ -1,7 +1,7 @@
 # PIC Code
 *.cod
 *.lst
-*.hex
+.hex
 .DS_Store
 
 # VS-Code Files
