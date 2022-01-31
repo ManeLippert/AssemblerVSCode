@@ -42,6 +42,7 @@ Quelle: \url{https://www.making-sound.co.uk/tech-notes/pickit2-linux.html}\\
     \end{center}
     \item[6)] Nun wird der Command \enquote{pk2cmd} global zugänglich gemach mit diesem Befehl, welcher wieder im selben Ordner ausgeführt werden muss:
     \begin{lstlisting}[language=bash]
+    sudo make install
     echo 'export PATH="$PATH:/usr/share/pk2"' >> ~/.bashrc
     \end{lstlisting}
     Danach kann man den Ordner verlassen und den globalen Befehl wie folgt testen:
