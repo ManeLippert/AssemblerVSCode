@@ -1,9 +1,9 @@
 # PIC-Programmierung mit PICkit 2 unter Linux
-#### Von Manuel Lippert für den Kurs \enquote{Prozessrechner und Elektronik} an der Universität Bayreuth
+#### Von Manuel Lippert für den Kurs "Prozessrechner und Elektronik" an der Universität Bayreuth
 
 Dies ist eine Anleitung für das Aufsetzen von Assembler unter Linux mit der Zusätzlichen Erklärung, wie man es weiter in Visual Studio Code einrichten kann. Diese Anleitung entstand im Rahmen des Moduls "Prozessrechner und Elektronik" an der Universität Bayreuth und soll kommenden Studenten den Programmiereinstieg vereinfachen.
 
-# Anleitung
+# Anleitung ([PDF](HowToLinux.pdf)
 ![alt text](Bilder/PDF_Picture/HowToLinux-01.png)
 ![alt text](Bilder/PDF_Picture/HowToLinux-02.png)
 ![alt text](Bilder/PDF_Picture/HowToLinux-03.png)
